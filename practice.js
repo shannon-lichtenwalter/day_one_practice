@@ -7,11 +7,38 @@
 //   console.log(i);
 // }
 
-//while loop
+//while loop-- best used when the looped behavior does not
+//have a known number of iterations, but rather has a known logical condition where it should terminate.
 
-let counter = 1;
-const countTo = 10;
-while (counter <= countTo) {
-  console.log(counter);
-  counter++;
+// let counter = 1;
+// const countTo = 10;
+// while (counter <= countTo) {
+//   console.log(counter);
+//   counter++;
+// }
+
+//Max and Min Drill
+
+function max(numbers){
+  let currentMax = numbers[0];
+  for (let i=0; i < numbers.length; i++){
+    if (currentMax < numbers[i]){
+      currentMax = numbers[i];
+    }
+  }
+  return currentMax;
 }
+
+console.log(max([1,2,6,7,3,100]));
+
+function min(numbers){
+  let currentMin = numbers[0];
+  for (let i=0; i<numbers.length; i++){
+    if (currentMin > numbers[i]){
+      currentMin = numbers [i];
+    }
+  }
+  return currentMin;
+}
+
+console.log(min([1,5,6,-10,29]));
