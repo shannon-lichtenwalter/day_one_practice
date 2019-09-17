@@ -45,12 +45,32 @@
 
 //average drill
 
-function average(numbers){
-  let total = numbers [0];
-  for (let i=1; i<numbers.length; i++) {
-    total += numbers[i];
+// function average(numbers){
+//   let total = numbers [0];
+//   for (let i=1; i<numbers.length; i++) {
+//     total += numbers[i];
+//   }
+//   return total/numbers.length;
+// }
+
+// console.log(average([1,2,3,4]));
+
+//fizzBuzz drill
+
+function fizzBuzz(countTo){
+  let result = [];
+  for(let i=1; i <= countTo; i++){
+    if (i % 3 === 0 && i % 5 === 0){
+      result.push('fizzbuzz');
+    } else if (i % 3 === 0){
+      result.push('fizz');
+    } else if (i % 5 === 0) {
+      result.push('buzz');
+    } else {
+      result.push(i);
+    }
   }
-  return total/numbers.length;
+  return result;
 }
 
-console.log(average([1,2,3,4]));
+console.log(fizzBuzz(15));
