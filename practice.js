@@ -19,26 +19,38 @@
 
 //Max and Min Drill
 
-function max(numbers){
-  let currentMax = numbers[0];
-  for (let i=0; i < numbers.length; i++){
-    if (currentMax < numbers[i]){
-      currentMax = numbers[i];
-    }
+// function max(numbers){
+//   let currentMax = numbers[0];
+//   for (let i=0; i < numbers.length; i++){
+//     if (currentMax < numbers[i]){
+//       currentMax = numbers[i];
+//     }
+//   }
+//   return currentMax;
+// }
+
+// console.log(max([1,2,6,7,3,100]));
+
+// function min(numbers){
+//   let currentMin = numbers[0];
+//   for (let i=0; i<numbers.length; i++){
+//     if (currentMin > numbers[i]){
+//       currentMin = numbers [i];
+//     }
+//   }
+//   return currentMin;
+// }
+
+// console.log(min([1,5,6,-10,29]));
+
+//average drill
+
+function average(numbers){
+  let total = numbers [0];
+  for (let i=1; i<numbers.length; i++) {
+    total += numbers[i];
   }
-  return currentMax;
+  return total/numbers.length;
 }
 
-console.log(max([1,2,6,7,3,100]));
-
-function min(numbers){
-  let currentMin = numbers[0];
-  for (let i=0; i<numbers.length; i++){
-    if (currentMin > numbers[i]){
-      currentMin = numbers [i];
-    }
-  }
-  return currentMin;
-}
-
-console.log(min([1,5,6,-10,29]));
+console.log(average([1,2,3,4]));
